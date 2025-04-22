@@ -1,0 +1,9 @@
+{
+  "item.custom-torches.red_torch_item": "Antorcha Rojo",
+  "itemGroup.custom-torches.torch_group": "Antorchas",
+  "item.custom-torches.blue_torch_item": "Antorcha Azul",
+  "item.custom-torches.orange_torch_item": "Antorcha Naranja",
+  "item.custom-torches.yellow_torch_item": "Antorcha Amarillo",
+  "item.custom-torches.green_torch_item": "Antorcha Verde",
+  "item.custom-torches.purple_torch_item": "Antorcha Morado"
+}

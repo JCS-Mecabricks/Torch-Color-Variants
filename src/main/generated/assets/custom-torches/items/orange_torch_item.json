@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "custom-torches:item/orange_torch_item"
+  }
+}

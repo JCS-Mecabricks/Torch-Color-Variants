@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "custom-torches:block/yellow_torch"
+    }
+  }
+}

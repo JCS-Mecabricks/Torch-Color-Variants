@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "custom-torches",
+	"version": "${version}",
+	"name": "Custom Torches",
+	"description": "A mod that adds torches with a different variety of colors.",
+	"authors": [
+		"JCS"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/custom-torches/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.jcsmecabricks.customtorches.CustomTorches"
+		],
+		"fabric-datagen": [
+			"github.jcsmecabricks.customtorches.CustomTorchesDataGenerator"
+		],
+		"client": [
+			"github.jcsmecabricks.customtorches.CustomTorchesClient"
+		]
+	},
+	"mixins": [
+		"custom-torches.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

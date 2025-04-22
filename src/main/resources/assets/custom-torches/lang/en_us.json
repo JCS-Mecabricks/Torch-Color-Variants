@@ -1,0 +1,9 @@
+{
+  "itemGroup.custom-torches.torch_group": "Torches",
+  "item.custom-torches.red_torch_item": "Red Torch",
+  "item.custom-torches.blue_torch_item": "Blue Torch",
+  "item.custom-torches.orange_torch_item": "Orange Torch",
+  "item.custom-torches.yellow_torch_item": "Yellow Torch",
+  "item.custom-torches.green_torch_item": "Green Torch",
+  "item.custom-torches.purple_torch_item": "Purple Torch"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:lapis_lazuli",
+    "minecraft:torch"
+  ],
+  "result": {
+    "count": 1,
+    "id": "custom-torches:blue_torch_item"
+  }
+}

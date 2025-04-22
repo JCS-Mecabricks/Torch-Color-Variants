@@ -1,0 +1,13 @@
+// 1.21.5	-999999999-01-01T00:00:00	Custom Torches/Custom Torches Recipes
+d36a2f7ddcc962e927635740f0ee58b7c2fc4b23 data/custom-torches/advancement/recipes/misc/blue_torch_item.json
+76163188a8cd135ec67a6ddb5a19c93f5542a091 data/custom-torches/advancement/recipes/misc/green_torch_item.json
+6777a13a6b03a1406ea049ff574f85d50c7287f4 data/custom-torches/advancement/recipes/misc/orange_torch_item.json
+1e6f282111c342f39480559cb2f3f9529159b5ce data/custom-torches/advancement/recipes/misc/purple_torch_item.json
+1d527828afa58c23d7d9fced751f0df50d4cc30d data/custom-torches/advancement/recipes/misc/red_torch_item.json
+8cc1ae52f80c1215106e6ce54a9a83e0ce2aa130 data/custom-torches/advancement/recipes/misc/yellow_torch_item.json
+5d8decb46b7c97db0fac27c7f2f4ff1cba4d1070 data/custom-torches/recipe/blue_torch_item.json
+2c2de68f3bc1d914caaeabb2c429bd3b29de0fb0 data/custom-torches/recipe/green_torch_item.json
+91f70f8685360866d1ca0d68c6da49dd62e2421a data/custom-torches/recipe/orange_torch_item.json
+70ba25a838ffd3ff595da97a1001be0f48ec6bb9 data/custom-torches/recipe/purple_torch_item.json
+348c693ca56fee120025bf6cf08ff835ce3abce4 data/custom-torches/recipe/red_torch_item.json
+1defab8a2639c598a301875962bb11962ccd4e49 data/custom-torches/recipe/yellow_torch_item.json
