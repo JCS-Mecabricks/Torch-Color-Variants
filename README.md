@@ -2,7 +2,7 @@
 
 ## Torch Color Variants
 
-[![Discord](https://img.shields.io/discord/1362623309606289561?logo=discord&color=blue)](https://discord.gg/esy7Fy8Pfk)
+[![Discord](https://img.shields.io/discord/1362623309606289561?logo=discord&color=blue)](https://discord.gg/DQ5TxxjVQC)
 [![Modrinth Badge](https://img.shields.io/modrinth/dt/torch-color-variants?label=Modrinth&logo=modrinth "View our Modrinth page")]([https://modrinth.com/mod/torch-color-variants](https://modrinth.com/mod/torch-color-variants))
 [![GitHub License](https://img.shields.io/github/license/JCS-Mecabricks/Terrabiomes?color=%2342e3f5)](https://github.com/JCS-Mecabricks/Torch-Color-Variants/blob/master/LICENSE)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/JCS-Mecabricks/Terrabiomes?logo=github&color=yellow)](https://github.com/JCS-Mecabricks/Torch-Color-Variants/issues)
