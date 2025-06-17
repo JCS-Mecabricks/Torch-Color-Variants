@@ -1,12 +1,9 @@
 package github.jcsmecabricks.customtorches;
 
-import github.jcsmecabricks.customtorches.block.ModBlocks;
 import github.jcsmecabricks.customtorches.particle.TorchParticles;
 import github.jcsmecabricks.customtorches.particle.ModParticles;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.minecraft.client.render.RenderLayer;
 
 public class CustomTorchesClient implements ClientModInitializer {
     @Override
