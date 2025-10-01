@@ -2,20 +2,26 @@ package github.jcsmecabricks.customtorches.particle;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.particle.*;
+import net.fabricmc.fabric.api.client.particle.v1.FabricSpriteProvider;
+import net.minecraft.client.particle.AbstractSlowingParticle;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.particle.ParticleFactory;
+import net.minecraft.client.particle.ParticleTextureSheet;
+import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.random.Random;
+import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
 public class TorchParticles extends AbstractSlowingParticle {
-    TorchParticles(ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-        super(clientWorld, d, e, f, g, h, i);
-    }
+    private final Sprite sprite;
 
-    @Override
-    public ParticleTextureSheet getType() {
-        return ParticleTextureSheet.PARTICLE_SHEET_OPAQUE;
+    public TorchParticles(ClientWorld world, double x, double y, double z,
+                          double velocityX, double velocityY, double velocityZ, Sprite sprite) {
+        super(world, x, y, z, velocityX, velocityY, velocityZ, sprite);
+        this.sprite = sprite;
     }
 
     @Override
@@ -34,45 +40,61 @@ public class TorchParticles extends AbstractSlowingParticle {
     public int getBrightness(float tint) {
         float f = (this.age + tint) / this.maxAge;
         f = MathHelper.clamp(f, 0.0F, 1.0F);
-        int i = super.getBrightness(tint);
-        int j = i & 0xFF;
-        int k = i >> 16 & 0xFF;
-        j += (int)(f * 15.0F * 16.0F);
-        if (j > 240) {
-            j = 240;
-        }
-
-        return j | k << 16;
+        int baseBrightness = super.getBrightness(tint);
+        int blockLight = baseBrightness & 0xFF;
+        int skyLight = (baseBrightness >> 16) & 0xFF;
+        blockLight += (int)(f * 15.0F * 16.0F);
+        if (blockLight > 240) blockLight = 240;
+        return blockLight | (skyLight << 16);
     }
 
+    @Override
+    public ParticleTextureSheet textureSheet() {
+        return ParticleTextureSheet.SINGLE_QUADS;
+    }
+
+    @Override
+    protected RenderType getRenderType() {
+        return RenderType.PARTICLE_ATLAS_OPAQUE;
+    }
+
+    // Factory class for creating TorchParticles
     @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<SimpleParticleType> {
-        private final SpriteProvider spriteProvider;
+        private final FabricSpriteProvider spriteProvider;
 
-        public Factory(SpriteProvider spriteProvider) {
+        public Factory(FabricSpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
-        public Particle createParticle(SimpleParticleType simpleParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            TorchParticles torchParticles = new TorchParticles(clientWorld, d, e, f, g, h, i);
-            torchParticles.setSprite(this.spriteProvider);
-            return torchParticles;
+        @Override
+        public @Nullable Particle createParticle(SimpleParticleType parameters, ClientWorld world,
+                                                 double x, double y, double z,
+                                                 double velocityX, double velocityY, double velocityZ,
+                                                 Random random) {
+            Sprite sprite = this.spriteProvider.getSprite(random);
+            return new TorchParticles(world, x, y, z, velocityX, velocityY, velocityZ, sprite);
         }
     }
 
+    // Optional: Smaller variant (can be extended if needed)
     @Environment(EnvType.CLIENT)
-    public static class SmallFactory implements ParticleFactory<SimpleParticleType> {
-        private final SpriteProvider spriteProvider;
+    public static abstract class SmallFactory implements ParticleFactory<SimpleParticleType> {
+        private final FabricSpriteProvider spriteProvider;
 
-        public SmallFactory(SpriteProvider spriteProvider) {
+        public SmallFactory(FabricSpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
-        public Particle createParticle(SimpleParticleType simpleParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            TorchParticles torchParticles = new TorchParticles(clientWorld, d, e, f, g, h, i);
-            torchParticles.setSprite(this.spriteProvider);
-            torchParticles.scale(0.5F);
-            return torchParticles;
+        @Override
+        public Particle createParticle(SimpleParticleType type, ClientWorld world,
+                                       double x, double y, double z,
+                                       double velocityX, double velocityY, double velocityZ,
+                                       Random random) {
+            Sprite sprite = this.spriteProvider.getSprite(random);
+            TorchParticles particle = new TorchParticles(world, x, y, z, velocityX, velocityY, velocityZ, sprite);
+            particle.scale(0.5F);
+            return particle;
         }
     }
 }
