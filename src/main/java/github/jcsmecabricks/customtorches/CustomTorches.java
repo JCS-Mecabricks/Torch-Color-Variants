@@ -6,10 +6,9 @@ import github.jcsmecabricks.customtorches.item.ModItems;
 import github.jcsmecabricks.customtorches.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,13 +24,13 @@ public class CustomTorches implements ModInitializer {
 		ModItems.load();
 		LOGGER.info("Hello Fabric world!");
 
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-			entries.addBefore(Blocks.TORCH, ModBlocks.ORANGE_TORCH);
-			entries.addBefore(ModBlocks.ORANGE_TORCH, ModBlocks.RED_TORCH);
-			entries.addAfter(Blocks.TORCH, ModBlocks.YELLOW_TORCH);
-			entries.addAfter(ModBlocks.YELLOW_TORCH, ModBlocks.GREEN_TORCH);
-			entries.addAfter(Blocks.SOUL_TORCH, ModBlocks.BLUE_TORCH);
-			entries.addAfter(ModBlocks.BLUE_TORCH, ModBlocks.PURPLE_TORCH);
+		CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
+			entries.insertBefore(Blocks.TORCH, ModBlocks.ORANGE_TORCH);
+			entries.insertBefore(ModBlocks.ORANGE_TORCH, ModBlocks.RED_TORCH);
+			entries.insertAfter(Blocks.TORCH, ModBlocks.YELLOW_TORCH);
+			entries.insertAfter(ModBlocks.YELLOW_TORCH, ModBlocks.GREEN_TORCH);
+			entries.insertAfter(Blocks.SOUL_TORCH, ModBlocks.BLUE_TORCH);
+			entries.insertAfter(ModBlocks.BLUE_TORCH, ModBlocks.PURPLE_TORCH);
 		});
 	}
 }

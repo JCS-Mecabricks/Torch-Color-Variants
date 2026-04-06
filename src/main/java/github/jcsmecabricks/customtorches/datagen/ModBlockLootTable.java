@@ -1,24 +1,23 @@
 package github.jcsmecabricks.customtorches.datagen;
 
 import github.jcsmecabricks.customtorches.block.ModBlocks;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
+import net.minecraft.core.HolderLookup;
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockLootTable extends FabricBlockLootTableProvider {
-    public ModBlockLootTable(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class ModBlockLootTable extends FabricBlockLootSubProvider {
+    public ModBlockLootTable(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.RED_TORCH);
-        addDrop(ModBlocks.BLUE_TORCH);
-        addDrop(ModBlocks.ORANGE_TORCH);
-        addDrop(ModBlocks.YELLOW_TORCH);
-        addDrop(ModBlocks.GREEN_TORCH);
-        addDrop(ModBlocks.PURPLE_TORCH);
+        dropSelf(ModBlocks.RED_TORCH);
+        dropSelf(ModBlocks.BLUE_TORCH);
+        dropSelf(ModBlocks.ORANGE_TORCH);
+        dropSelf(ModBlocks.YELLOW_TORCH);
+        dropSelf(ModBlocks.GREEN_TORCH);
+        dropSelf(ModBlocks.PURPLE_TORCH);
     }
 }
