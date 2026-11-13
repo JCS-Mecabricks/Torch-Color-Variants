@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "custom-torches:yellow_torch_item"
+        "recipes": "custom-torches:yellow_torch_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

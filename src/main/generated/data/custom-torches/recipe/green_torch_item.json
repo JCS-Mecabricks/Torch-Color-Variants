@@ -1,12 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "minecraft:emerald",
     "minecraft:torch"
   ],
   "result": {
-    "count": 1,
     "id": "custom-torches:green_torch_item"
   }
 }

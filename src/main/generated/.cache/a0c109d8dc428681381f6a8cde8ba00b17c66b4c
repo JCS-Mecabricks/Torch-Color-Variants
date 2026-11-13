@@ -1,7 +1,7 @@
-// 1.21.5	-999999999-01-01T00:00:00	Custom Torches/Block Loot Tables
-b89303bf860852846a62d1c58fc95e5f15cf9b70 data/custom-torches/loot_table/blocks/blue_torch.json
-3608034e5117f8127520a2cd200254ceebe8722e data/custom-torches/loot_table/blocks/green_torch.json
-d3a2080cb80150931104666ef7571c9e71a5d01f data/custom-torches/loot_table/blocks/orange_torch.json
-8fa35184f13d9983c9b6949c21a38621a1e208bc data/custom-torches/loot_table/blocks/purple_torch.json
-13827f1bfba87d4687a2552fddc5d02acc102bd2 data/custom-torches/loot_table/blocks/red_torch.json
-688393bc3f9396d2bd79c60af3c7ccbdae1d0095 data/custom-torches/loot_table/blocks/yellow_torch.json
+// 26.3	-999999999-01-01T00:00:00	Custom Torches/Block Loot Tables
+8e703f2a91f817582d06518b5edaebe8ec294a63 data/custom-torches/loot_table/blocks/blue_torch.json
+a93244695f364e8a869d52fb9d7bb20668ca6a11 data/custom-torches/loot_table/blocks/green_torch.json
+bbe6e3beb7782d65211a0dd2abc01c279b3d6c8f data/custom-torches/loot_table/blocks/orange_torch.json
+dd64d49632bec5bc46d834700763ce820c3bcc91 data/custom-torches/loot_table/blocks/purple_torch.json
+e6504d8182438dc7295ec68b423be9fe021e47a3 data/custom-torches/loot_table/blocks/red_torch.json
+5dfb0e69ed3fc36ede29939b864c0272290b5fcf data/custom-torches/loot_table/blocks/yellow_torch.json

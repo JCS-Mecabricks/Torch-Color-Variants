@@ -27,7 +27,7 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "red_torch")))
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block RED_WALL_TORCH = registerBlock(
             "red_wall_torch",
@@ -37,7 +37,7 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "red_wall_torch")))
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block ORANGE_TORCH = registerBlock(
             "orange_torch",
@@ -47,7 +47,7 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "orange_torch")))
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block ORANGE_WALL_TORCH = registerBlock(
             "orange_wall_torch",
@@ -57,7 +57,7 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "orange_wall_torch")))
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block YELLOW_TORCH = registerBlock(
             "yellow_torch",
@@ -67,7 +67,7 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "yellow_torch")))
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block YELLOW_WALL_TORCH = registerBlock(
             "yellow_wall_torch",
@@ -77,7 +77,7 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "yellow_wall_torch")))
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block GREEN_TORCH = registerBlock(
             "green_torch",
@@ -87,7 +87,7 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "green_torch")))
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block GREEN_WALL_TORCH = registerBlock(
             "green_wall_torch",
@@ -97,7 +97,7 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "green_wall_torch")))
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block BLUE_TORCH = registerBlock(
             "blue_torch",
@@ -107,7 +107,7 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "blue_torch")))
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block BLUE_WALL_TORCH = registerBlock(
             "blue_wall_torch",
@@ -117,7 +117,7 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "blue_wall_torch")))
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block PURPLE_TORCH = registerBlock(
             "purple_torch",
@@ -127,7 +127,7 @@ public class ModBlocks {
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "purple_torch")))
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
     public static final Block PURPLE_WALL_TORCH = registerBlock(
             "purple_wall_torch",
@@ -137,7 +137,7 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(CustomTorches.MOD_ID, "purple_wall_torch")))
                     .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
 
 
     private static BlockBehaviour.Properties copyLootTable(Block block, boolean copyTranslationKey) {
